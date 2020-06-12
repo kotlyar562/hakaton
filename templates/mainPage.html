@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    PyLearner
+{% endblock %}
+
+{% block content %}
+    <div class="header">
+        <div>
+            <img class="pyLogo" src="/static/pyhtonLOGO.jpg">
+        </div>
+        <div>
+            <h1 class="name"> PyLearner </h1>
+            <p class="thin-text"> tasks for learning Python </p>
+        </div>
+    </div>
+    <div class="greeting bold-text" style="display:flex; flex-direction: column;">
+        <h2> Welcome to the Website! </h2>
+        <p> We welcome you to our site PyLearner, we will help you learn the programming language Python with our tasks </p>
+    </div>
+
+    <div class="dropdown">
+        <button class="menubtn">Question Menu</button>
+        <div class="menu-link">
+            <a href="#">Question 1</a>
+            <a href="#">Question 2</a>
+            <a href="#">Question 3</a>
+        </div>
+    </div>
+
+    <p class="bold-text" style="text-align: left;"> Ready to try some questions? </p>
+
+    <div class="row">
+        <div class="column">
+            <h2>Question 1 - Description</h2>
+            <h2>Question 2 - Description</h2>
+        </div>
+        <div class="column">
+            <h2>Question 3 - Description</h2>
+        </div>
+    </div>
+{% endblock %}
