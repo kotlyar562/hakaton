@@ -106,3 +106,59 @@ h1{
 .dropdown:hover .menubtn{
     color: #00ffff;
 }
+
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: darkblue;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Task page */
+
+.task{
+    float: left;
+    width: 45%;
+    background: #ffd633;
+    font-size: 30px;
+    border: 1px, solid blue;
+    padding: 60px 0px 0px 20px;
+}
+.solution{
+    float: right;
+    width: 45%;
+    background: #1ac6ff;
+    font-size: 30px;
+    border: 1px, solid blue;
+    padding: 20px;
+}
+.code{
+    background: #4d94ff;
+    font-size: 25px;
+    color: white;
+    padding: 0px 0px 0px 30px;
+    font-weight: bold;
+}
+
+.data{
+    float: left;
+    background: #ffff66;
+    padding: 20px;
+}
+h2{
+    text-align:center;
+}
+
+.solution p{
+    font-weight: normal;
+}

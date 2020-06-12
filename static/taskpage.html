@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>
+            PyLearner
+    </title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="header">
+        <div>
+            <img class="pyLogo" src="pyhtonLOGO.jpg">
+        </div>
+        <div>
+            <h1 class="name"> PyLearner </h1>
+            <p class="thin-text"> tasks for learning Python </p>
+        </div>
+        <div>
+            <img class="pyLogo" src="itgenio.jpg">
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="menubtn">Question Menu</button>
+        <div class="menu-link">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+    <div>
+        <div class="task">
+            <h2>Задание для практики с циклом While</p>
+            <h4> By : Ana Mayer </h4>
+            <p class="bold-text">
+            <p>У Алисы есть коробка с маленькими квадратами 1х1 внутри.
+            Она любит делать квадраты с ними на столе. Она хочет, чтобы вы помогли ей выяснить,
+            сколько квадратов разных размеров она может сделать с маленькими квадратами в своей коробке.</p>
+            <div class="data">
+                <p style="font-weight: bold;"> Входные данные: </p>
+                <p>Количество маленьких квадратов внутри коробки.</p>
+                <p style="font-weight: bold;">Вывод:</p>
+                <p>Количество разных квадратов она может сделать.</p>
+                <p style="font-weight: bold;">Пример:</p>
+                <p>Вход: 50</p>
+                <p>Выход: 7</p>
+            </div>
+        </div>
+        <div class="solution">
+            <h2>Решение</h2>
+            <p class="bold-text">Если мы посмотрим на пример, мы увидим, что Алиса имеет 50 маленьких квадратов. Таким образом, она может сделать следующие квадраты:</p>
+            <p class="bold-text">1x1 = 1, 2x2 = 4, 3x3 = 9, 4x4 = 16, 5x5 = 25, 6x6 = 36, 7x7 = 49.</p>
+            <p class="bold-text">Мы можем использовать счетчик и цикл while, где счетчик будет представлять длину стороны квадрата.
+                Итак, нам нужно просмотреть все значения c от одного до тех пор, пока квадрат c не станет больше, чем количество маленьких квадратов в коробке.
+                (физически мы не можем сделать квадрат):</p>
+            <div class="code">
+                <p> n = int(input())</p>
+                <p>c = 1</p>
+                <p>answer = ""</p>
+
+                <p>while c*c < n:</p>
+                <p>answer += str(c*c) + " "</p>
+                <p>c += 1</p>
+                <p>print(answer)</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
