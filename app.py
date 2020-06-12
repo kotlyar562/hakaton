@@ -17,3 +17,7 @@ def question2():
 @app.route('/question3')
 def question3():
     return render_template("question3.html")
+
+@app.route('/question4')
+def question4():
+    return render_template("question4.html")
