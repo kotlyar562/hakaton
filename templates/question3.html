@@ -5,5 +5,68 @@
 {% endblock %}
 
 {% block content %}
+    <div class="header">
+        <div>
+            <img class="pyLogo" src="/static/pyhtonLOGO.jpg">
+        </div>
+        <div>
+            <h1 class="name"> PyLearner </h1>
+            <p class="thin-text"> tasks for learning Python </p>
+        </div>
+        <div>
+            <img class="pyLogo" src="/static/itgenio.jpg">
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="menubtn">Question Menu</button>
+        <div class="menu-link">
+            <a href="question1">Question 1</a>
+            <a href="question2">Question 2</a>
+            <a href="question3">Question 3</a>
+        </div>
+    </div>
+    <div>
+        <div class="task">
+            <h2>Перевёртыш</h2>
+            <h4> By : Timofey Sheparev </h4>
+            <p class="bold-text">
+            <p>Сделайте так чтобы слово "Itgenio" отобразилось наоборот.</p>
+            <div class="data">
+                <p style="font-weight: bold;"> Входные данные: </p>
+                <p>На вход нужно принять строку</p>
+                <p style="font-weight: bold;">Вывод:</p>
+                <p>Вывод должен содержать ту же строку, но она должна быть перевернута</p>
+                <p style="font-weight: bold;">Пример:</p>
+                <p>Вход: Itgenio</p>
+                <p>Выход: oinegtI</p>
+            </div>
+        </div>
+        <div class="solution">
+            <h2>Решение</h2>
+            <p class="bold-text">
+                Используя отрезки (slices) с тремя параметрами
+                (первый параметр определяет от какого символа мы будем считывать строку,
+                второй определяет до какого символа мы будем считывать строку и третий определяет интервал между символами которые берутся в переменную)
+                мы создаём интервал в обратную сторону тем самым заносятся все буквы от конца до начала
+            </p>
+            <div class="code">
+                <p># 1 Способ</p>
+                <p>
+                    I = "Itgenio"<br>
+                    R = I[::-1]<br>
+                    print(R)
+                </p>
+                <p># 2 Способ</p>
 
+                <p>
+                    I = "Itgenio"<br>
+                    Z = ''<br>
+                    for i in range(len(I) - 1, - 1, -1):<br>
+                        Z += (I[i])<br>
+                    print(Z)
+                </p>
+
+            </div>
+        </div>
+    </div>
 {% endblock %}

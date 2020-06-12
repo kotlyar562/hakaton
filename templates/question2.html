@@ -5,5 +5,78 @@
 {% endblock %}
 
 {% block content %}
+    <div class="header">
+        <div>
+            <img class="pyLogo" src="/static/pyhtonLOGO.jpg">
+        </div>
+        <div>
+            <h1 class="name"> PyLearner </h1>
+            <p class="thin-text"> tasks for learning Python </p>
+        </div>
+        <div>
+            <img class="pyLogo" src="/static/itgenio.jpg">
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="menubtn">Question Menu</button>
+        <div class="menu-link">
+            <a href="question1">Question 1</a>
+            <a href="question2">Question 2</a>
+            <a href="question3">Question 3</a>
+        </div>
+    </div>
+    <div>
+        <div class="task">
+            <h2>Секретный Email</h2>
+            <h4> By : Andrei Seleznev </h4>
+            <p class="bold-text">
+            <p>Иногда на некоторых сайтах, если вы заходите в свой профиль и просматриваете электронную почту,
+            Вы можете увидеть, что центральная часть электронной почты скрыта, мы попробуем сделать что-то подобное.</p>
+            <div class="data">
+                <p style="font-weight: bold;"> Входные данные: </p>
+                <p>При вводе мы должны принять электронную почту (не менее 20 символов),
+                если адрес электронной почты содержит менее 20 символов, мы должны запросить данные почты еще раз.</p>
+                <p style="font-weight: bold;">Вывод:</p>
+                <p>Вывод должен содержать слово, состоящее из первого символа электронной почты,
+                количество символов между первым и последним символом электронной почты и последним символом электронной почты.</p>
+                <p style="font-weight: bold;">Пример:</p>
+                <p>Вход: somesymbols@gmail.com</p>
+                <p>Выход: s19m</p>
+            </div>
+        </div>
+        <div class="solution">
+            <h2>Решение</h2>
+            <p class="bold-text">сначала я создаю переменную 'email' и запрашиваю в нее данные,
+            затем проверяю наличие не менее 20 символов с помощью метода 'while',
+            если символов меньше, я снова запрашиваю данные в переменную 'email'.
+            Затем я создаю переменную с именем 'result'. А чтобы центральные символы можно было заменить, существуют срезы.
+            срез - извлекает из заданной строки отдельные символы или некоторый фрагмент подстроки или подпоследовательности.
+            Существует три вида срезов, но на данный момент нам нужен срез с двумя параметрами: s[a:b],
+            где 's' это строка, а 'a', 'b' это индексы, которые определяют начало и конец среза.
+            Вы можете прочитать больше информации о срезах здесь: <a href="http://pythontutor.ru/lessons/str/">http://pythontutor.ru/lessons/str/</a>
+            Теперь, используя срез, я добавляю первый символ переменной 'email' к переменной 'result',
+            срез центральных символов и последний символ. Далее я просто вывожу результат.</p>
+            <div class="code">
+                <p>
+                    # email variable creation<br>
+                    email = input('Write Email: ')
+                </p>
+                <p>
+                    # Checking for 20 symbols in the email variable<br>
+                    while len(email) < 20:<br>
+                        print('Email less than 20 symbols')<br>
+                        email = input('Write Email again: ')
+                </p>
+                <p>
+                    # Create lastResult variable using slice<br>
+                    result = email[0] + str(len(email[1:-1])) + email[-1]
+                </p>
 
+                <p>
+                    # Output result<br>
+                    print('Last result:', result)
+                </p>
+            </div>
+        </div>
+    </div>
 {% endblock %}
