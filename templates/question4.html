@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    PyLearner
+{% endblock %}
+
+{% block content %}
+    <div class="header">
+        <div>
+            <img class="pyLogo" src="/static/pyhtonLOGO.jpg">
+        </div>
+        <div>
+            <h1 class="name"> PyLearner </h1>
+            <p class="thin-text"> tasks for learning Python </p>
+        </div>
+        <div>
+            <img class="pyLogo" src="/static/itgenio.jpg">
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="menubtn">Question Menu</button>
+        <div class="menu-link">
+            <a href="/question1">Question 1</a>
+            <a href="/question2">Question 2</a>
+            <a href="/question3">Question 3</a>
+            <a href="/question4">Question 4</a>
+        </div>
+    </div>
+    <div>
+        <div class="task">
+            <h2>Задание для списков, рекурсии, и цикла for</h2>
+            <h4> By : Ana Mayer </h4>
+            <p class="bold-text">
+            <p>
+                Майкл практикует сложение, умножение и факториалы.
+                У его старшей сестры есть карточки с номерами от 1 до 9.
+                Она выстраивает их в квадрат и просит Майкла найти сумму факториалов чисел на диагонали квадрата сверху вниз слева направо.
+                После того, как его сестра уходит, он отправляет вам сообщение с длиной стороны квадрата и все числами.
+                Вы можете помочь Майклу выполнить задачу его сестры?
+            </p>
+            <div class="data">
+                <p style="font-weight: bold;"> Входные данные: </p>
+                <p>Длина стороны квадрата и все числа внутри.</p>
+                <p style="font-weight: bold;">Вывод:</p>
+                <p>Сумма факториалов чисел по диагонали квадрата.</p>
+                <p style="font-weight: bold;">Пример:</p>
+                <p>Вход:</p>
+                <p>3</p>
+                <p>1 2 3</p>
+                <p>3 5 4</p>
+                <p>2 2 2</p>
+                <p>Выход: 123</p>
+            </div>
+        </div>
+        <div class="solution">
+            <h2>Решение</h2>
+            <p class="bold-text">Сначала мы получаем длину стороны квадрата и помещаем целое число в переменную «n».</p>
+            <p class="bold-text">
+                Затем есть рекурсивная функция factorial (перед тем местом, где мы хотим использовать функцию factorial ()).
+                Параметр, который получает наша функция, это «x» - число, из которого мы хотим найти факториал. В теле функции, мы вычисляем значение х! и сохраните его в переменной «у».
+                Последняя строка функции возвращает «y».
+            </p>
+            <p class="bold-text">
+                В цикле FOR переменная «i» принимает значения от 0 до n (поскольку n не включено, на самом деле диапазон составляет от 0 до n-1),
+                мы получаем список всех чисел в определенной строке (в переменной row) и берём i-й элемент.
+                Если мы посмотрим на картину в целом, это даст нам числа на диагонали квадрата.
+                Мы вводим это число в функцию факториала, которая вычисляет факториал, и добавляем результат в нашу переменную answer.
+            </p>
+            <div class="code">
+                <p>n = int(input())</p>
+                <p>answer = 0</p>
+
+                <p>def factorial(x):</p>
+                <p>     y = 1</p>
+                <p>     for i in range(1, x + 1):</p>
+                <p>     y *= i</p>
+                <p>     return y</p>
+
+                <p>for i in range(n):</p>
+                <p>     row = [int(s) for s in input().split()]</p>
+                <p>     answer += factorial(row[i])</p>
+                <p>     print(answer)</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
